@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content=
+        "width=device-width, initial-scale=1.0">
+    <title>
+        Build a Survey Form using HTML and CSS
+    </title>
+ 
+    <style>
+ 
+        /* Styling the Body element i.e. Color,
+        Font, Alignment */
+        body {
+            background-color: silver;
+            font-family: Verdana;
+            text-align: center;
+        }
+ 
+        /* Styling the Form (Color, Padding, Shadow) */
+        form {
+            background-color: #fff;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px 20px;
+            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+ 
+        /* Styling form-control Class */
+        .form-group {
+            text-align: left;
+            margin-bottom: 25px;
+        }
+ 
+        /* Styling form-control Label */
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+        }
+ 
+        /* Styling form-control input,
+        select, textarea */
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            padding: 10px;
+            display: block;
+            width: 95%;
+        }
+ 
+        /* Styling form-control Radio
+        button and Checkbox */
+        .form-group input[type="radio"],
+        .form-group input[type="checkbox"] {
+            display: inline-block;
+            width: auto;
+        }
+ 
+        /* Styling Button */
+        button {
+            background-color: #05c46b;
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            font-size: 21px;
+            display: block;
+            width: 100%;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+      
+        .description {
+            font-style: italic;
+            font-weight: 200;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+          }
+      
+        .text-center {
+            text-align: center;
+          }
+
+    </style>
+</head>
+  
+<body>
+    <h1 id="title">Sample Survey Form</h1>
+    <p id="description" class="description text-center">
+      Thank you for taking the time
+    </p>
+    <!-- Create Form -->
+    <form id="survey-form">
+ 
+        <!-- Details -->
+        <div class="form-group">
+            <label for="name" id="name-label">
+                Name
+            </label>
+ 
+            <!-- Input Type Text -->
+            <input type="text"
+                   id="name"
+                   placeholder="Enter your name" 
+                   required/>
+        </div>
+  
+        <div class="form-group">
+            <label for="email" id="email-label">
+                Email
+            </label>
+ 
+            <!-- Input Type Email-->
+            <input type="email"
+                   id="email"
+                   placeholder="Enter your email" 
+                   required/>
+        </div>
+  
+        <div class="form-group">
+            <label for="age" id="number-label">
+                Age
+            </label>
+ 
+            <!-- Input Type Text -->
+            <input type="number"
+                   id="number"
+                   placeholder="Enter your age" 
+                   min="10"
+                   max="65"/>
+        </div>
+  
+        <div class="form-group">
+            <label for="role" id="label-role">
+                Which option best describes you?
+            </label>
+             
+            <!-- Dropdown options -->
+            <select name="role" id="dropdown" required>
+                <option value="student">Student</option>
+                <option value="intern">Intern</option>
+                <option value="professional">
+                    Professional
+                </option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+  
+        <div class="form-group">
+            <label>
+                Would you recommed this
+                to a friend?
+            </label>
+ 
+            <!-- Input Type Radio Button -->
+            <label>
+        <input
+          name="user-recommend"
+          value="definitely"
+          type="radio"
+          class="input-radio"
+          checked
+        />Definitely</label
+      >
+      <label>
+        <input
+          name="user-recommend"
+          value="maybe"
+          type="radio"
+          class="input-radio"
+        />Maybe</label
+      >
+        </div>
+  
+        <div class="form-group">
+            <label>Languages and Frameworks known
+                <small>(Check all that apply)</small>
+            </label>
+            <!-- Input Type Checkbox -->
+            
+        <input
+          name="prefer"
+          value="JAVA"
+          type="checkbox"
+          class="input-checkbox"
+        />JAVA</label
+      >
+      <label
+        ><input
+          name="prefer"
+          value="C++"
+          type="checkbox"
+          class="input-checkbox"
+        />C++</label
+      >
+      <label
+        ><input
+          name="prefer"
+          value="HTML"
+          type="checkbox"
+          class="input-checkbox"
+        />HTML</label
+      >
+      <label
+        ><input
+          name="prefer"
+          value="C#"
+          type="checkbox"
+          class="input-checkbox"
+        />C#</label
+      >
+      
+        </div>
+  
+        <div class="form-group">
+            <label for="comment">
+                Any comments or suggestions
+            </label>
+ 
+            <!-- multi-line text input control -->
+            <textarea name="comment" id="comment"
+                placeholder="Enter your comment here">
+            </textarea>
+        </div>
+  
+        <!-- Multi-line Text Input Control -->
+        <button id="submit" type="submit" value="submit">
+            Submit
+        </button>
+    </form>
+  
+        [
+            <small>Developed by @<a href="#">
+                    MDL.</a></a>
+        </small>]
+</body>
+  
+</html>
